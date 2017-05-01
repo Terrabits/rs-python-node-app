@@ -1,0 +1,56 @@
+{
+  "name": "rs-TODO-app",
+  "productName": "R&S TODO",
+  "description": "TODO",
+  "version": "0.0.1",
+  "author": "Nick Lalic",
+  "copyright": "© 2017 Rohde & Schwarz North America",
+  "homepage": "https://vna.rs-us.net/TODO",
+  "license": "SEE LICENSE IN license.txt",
+  "repository": "TODO",
+  "keywords": [
+    "TODO"
+  ],
+  "main": "main.js",
+  "build": {
+    "appId": "com.TODO.rs",
+    "asar": false,
+    "files": [
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json",
+      "main.js"
+    ]
+  },
+  "dependencies": {
+    "electron-config": ">=0.2.1",
+    "electron-is-dev": "^0.1.2",
+    "moment": "^2.17.1"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "devtron": "^1.4.0",
+    "electron": "^1.4.7",
+    "electron-builder": "^8.6.0",
+    "gulp": "^3.9.0",
+    "gulp-shell": "^0.6.1"
+  },
+  "scripts": {
+    "asar":       "asar",
+    "start":      "electron .",
+    "restart":    "gulp restart",
+    "clean":      "gulp clean",
+    "clean-mm":   "gulp clean-html",
+    "clean-py":   "gulp clean-py",
+    "build-py":   "gulp build-py",
+    "build-mm":   "gulp build-html",
+    "build":      "gulp build",
+    "rebuild-py": "gulp rebuild-py",
+    "rebuild-mm": "gulp rebuild-html",
+    "rebuild":    "gulp rebuild",
+    "pack":       "build --dir",
+    "repack":     "gulp repack",
+    "dist":       "CSC_IDENTITY_AUTO_DISCOVERY=false build",
+    "redist":     "gulp redist"
+  }
+}

@@ -1,0 +1,21 @@
+<div id="settings-drawer" class="drawer drawer-right dw-xs-4 fold" aria-labelledby="settings-drawer" aria-expanded="false">
+	<div class="drawer-controls">
+      <a id="settings-cog" class="folded" role="button" href="#settings-drawer" data-toggle="drawer" aria-controls="settings-drawer" aria-expanded="false">
+				<strong><span class="glyphicon glyphicon-cog"></span></strong>
+			</a>
+  </div>
+	<div class="drawer-contents">
+		<div class="drawer-body">
+		<form onsubmit="return false;">
+			<%= partial 'partials/open_dir', locals: {id: "open-dir",   text: "~/Documents/TestAutomation"   } %>
+			<%= partial 'partials/checkbox', locals: {id: "select-all", text: "Select All", label_id: "select-all-label"} %>
+			<%= partial 'partials/checkbox', locals: {id: "setting-1",  text: "Setting 1"                    } %>
+			<%= partial 'partials/checkbox', locals: {id: "setting-2",  text: "Setting 2",  is_checked: false} %>
+			<%= partial 'partials/checkbox', locals: {id: "setting-3",  text: "Setting 3",  is_checked: false} %>
+		</form>
+		</div>
+	</div>
+</div>
+<script>
+	$('#settings-drawer').drawer({toggle: false});
+</script>
